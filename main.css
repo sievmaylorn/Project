@@ -1,0 +1,468 @@
+
+    /* main .hero { 
+        width: 100%;
+        height: 80vh;
+        background-color: rgb(118, 17, 131);
+        display: flex;
+        flex-wrap: wrap;
+        padding: var(--paddingX);
+    }
+
+    main .hero .pf {
+        width: 50%;
+        height: 100%;
+        background-color: rgb(82, 101, 103);
+    }
+    main .hero .text-content {
+        width: 50%;
+        height: 100%;
+        background-color: rgb(174, 31, 55);
+    }
+    @media (min-width: 300px) {
+        main .hero .pf,
+        main .hero .text-content 
+        {
+            width: 100%;
+            height: 100%;
+        }
+        main .hero {
+            padding: 0;
+        }
+    }
+
+    @media (min-width:768px) {
+        main .hero {
+            width: 100%;
+            height: 80vh;
+           
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+        main .hero .pf {
+            width: 50%;
+            height: 100%;
+            background-color: rgb(197, 101, 101);
+        }
+        main .hero .text-contentt {
+            width: 50%;
+            height: 100%;
+            background-color: rgb(196, 41, 67);
+        }
+    }
+    @media (min-width: 992px) {
+        main .hero {
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            flex-wrap: wrap;
+            padding: var(--paddingX);
+        }
+        
+        main .hero .pf {
+            width: 50%;
+            height: 100%;
+            background-color: brown;
+        }
+        main .hero .text-content {
+            width: 50%;
+            height: 100%;
+            background-color: rgb(26, 39, 188);
+        }
+     */
+    /* body {
+        background-color: lightblue;
+    } */
+     .container > main {
+        width: 100%;
+        height: 80vh;
+        /* background-color: rgb(49, 34, 183); */
+     }
+     .container > main > .hero {
+        width: 100%;
+        height: 100%;
+        /* background-color: red; */
+     }
+     
+     .container > main > .hero > .image-user {
+        height: 50%;
+        width: 100%;
+        display: grid;
+        place-content: center;
+        padding: 30px;
+     }
+     .container > main > .hero > .image-user > .pf {
+        width: 170px;
+        height: 170px;
+        border-radius: 50%;
+        position: relative;
+        margin-bottom:40px ;
+
+     }
+
+     .container > main > .hero > .image-user > .pf::before {
+        content: " ";
+        position: absolute;
+        width: 105%;
+        height: 105%;
+        border: 5px solid rgb(35, 85, 152);
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+     }
+
+     .container > main > .hero > .image-user > .pf > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+     }
+
+     /* --------------------------text------------------------------ */
+    .container > main > .hero > .content-text {
+            width: 100%;
+            /* height: 50%; */
+            /* background-color: rgb(94, 134, 166); */
+            padding:0 50px;
+    }
+    .container > main > .hero > .content-text > .text {
+        text-align: center;
+    }
+
+    .container > main > .hero > .content-text > .text > h1 {
+        font-weight: 600;
+        line-height: 40px;
+        color: rgb(21, 46, 129);
+    }
+    .container > main > .hero > .content-text > .text > p {
+        padding: 10px 7px;
+        color: rgb(57, 66, 198);
+    }
+    .container > main > .hero > .content-text > .text >  button {
+        padding: 10px 20px;
+        font-size: large;
+        color: rgb(11, 20, 142);
+        background-color: transparent;
+        border: 2px solid rgb(39, 20, 148);
+        border-radius: 8px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+    }
+    .container > main > .hero > .content-text > .text >  button:hover {
+        color: rgb(255, 255, 255);
+    }
+    .container > main > .hero > .content-text > .text > button::before {
+        content: " ";
+        width: 0%;
+        height: 100%;
+        position: absolute;
+        background-color: rgb(27, 58, 143);
+        top:0;
+        left: 0;
+        z-index: -1;  /* ដាក់ដើម្បីអោយអក្សរលោតមកខាងមុខ when hover */
+        transition: 0.3s ease-in-out;
+    }
+    .container > main > .hero > .content-text > .text > button:hover::before
+    {
+        width: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 0;
+    } 
+    /* Or Can use this one
+        .container > main > .hero > .content-text .text button:hover {
+            transform: scale(1.1);
+        } */
+
+
+    /* Content EXperience */
+
+    .container > main > .content-exp {
+        width: 100%;
+        background-color: rgb(146, 172, 228);
+        margin-top: 15px;
+        padding: 50px 0;
+    }
+    .container > main > .content-exp > .title {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+    }
+    .container > main > .content-exp > .title > a {
+        column-rule: rgb(0, 0, 0);
+    }
+    .container > main > .content-exp > .row {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .container > main > .content-exp .row > .card {
+        width: 100%;
+        /* height: 150px; */
+        background-color: rgb(255, 255, 255);
+        border-radius: 8px;
+        margin-bottom: 20px;
+        padding: 25px 15px;
+    }
+
+     /* Class time */
+     .container > main > .content-exp .row > .card  > .time {
+        margin: 10px 0;
+        color: rgb(109, 106, 106);
+     }
+     .container > main > .content-exp .row > .card > p {
+        color: gray;
+     }
+     .container > main > .content-exp .row > .card > h2 {
+        font-weight: 600px;
+     }
+
+     /* ------------------- Featutre Work ------------------*/
+     .container> main > .feature-work {
+        width: 100%;
+        /* height: 50vh; */
+        background-color: rgb(195, 102, 102);
+        padding: 15px 20px;
+        
+     }
+     .container> main > .feature-work > .tilte {
+        text-align: center;
+        margin: 5px 0;
+        font-size: 20px;
+     }
+     .container> main > .feature-work > .row {
+        width: 100%;
+        padding: 20px 0;
+     }
+     .container> main > .feature-work > .row > .card {
+        width: 100%;
+        /* border-bottom: 1px solid gray; */
+        background-color: rgb(176, 96, 150);
+        border-radius: 10px;
+     }
+     .container> main > .feature-work > .row > .card > .image img {
+        /* height: 250px; */
+        border-radius: 1px;
+        /* background-color: aquamarine; */
+     }
+     .container> main > .feature-work > .row > .card > .card-body {
+        padding: 20px 0;
+     }
+     .container> main > .feature-work > .row > .card > .card-body .year {
+        margin: 15px 0;
+     }
+     .container> main > .feature-work > .row > .card > .card-body {
+        margin: 0 15px;
+     }
+
+
+  
+
+
+
+    /* ------------------------------Screen Ipad---------------------------*/
+    @media (min-width: 768px) {
+        .container > main {
+            width: 100%;
+            height: 30vh;
+            /* background-color: rgb(49, 34, 183); */
+         }
+        
+        .container > main > .hero {
+            /* display: flex; */
+            padding:30px 20px;
+        }
+        .container > main > .hero > .image-user {
+            width: 40%;
+          
+           
+        }
+        .container > main > .hero > .image-user > .pf {
+            width: 240px;
+            height: 240px;
+            margin-bottom: 150px;
+        }
+        .container > main > .hero > .content-text {
+            width: 60%;
+            padding: 30px;
+        }
+        .container > main > .hero > .content-text > .text {
+            text-align: left;
+            
+        }
+        .container > main > .hero > .content-text > .text h1{
+            font-size: 40px;
+        }
+        .container > main > .hero > .content-text > .text p{
+            font-size:25px ;
+        }
+
+        /* Class row */
+        .container > main > .hero > .content-text > .row{
+            display: flex;
+            justify-content: space-between;
+        }
+        .container > main > .hero > .content-text > .row .card {
+            width: 49%;
+        }
+        .container > main > .hero > .content-text{
+            padding: 0 20px;
+        }
+
+         .container > main > .content-exp > .row {
+        display: flex;
+        justify-content: space-between;
+        }
+        .container > main > .content-exp > .row .card {
+            width: 49%;
+        }
+        .container > main > .content-exp {
+            padding: 0 20px;
+        }   
+        
+        /* today */
+        .container> main > .feature-work > .row {
+            padding: 0 20px;
+         }
+         .container> main > .feature-work > .row > .card  {
+            display: flex;
+            padding-bottom: 15px;
+         }
+         .container> main > .feature-work > .row > .card > .card-body {
+            margin-left: 200px;
+         }
+         .container> main > .feature-work > .row > .card > .image {
+            height: 200px;
+         }
+         .container> main > .feature-work > .tilte {
+            text-align: left;
+            margin-left: 20px;
+            margin-bottom: 10px;
+         }
+         .container> main > .feature-work {
+            width: 100%;
+            height: 50vh;
+            padding: 15px 20px;
+         }
+         .container> main > .feature-work > .tilte  {
+            text-align: center;
+            margin: 5px 0;
+            font-size: 18px;
+         }
+         .container> main > .feature-work > .row {
+            width: 100%;
+            padding: 20px 0;
+         }
+         .container> main > .feature-work > .row > .card{
+            width: 100%;
+            border-bottom: 1px solid white;
+            background-color: rgb(255, 255, 255);
+         }
+         .container> main > .feature-work > .row > .card > .image {
+            width: 100%;
+            height: 200px;
+            margin: 20px;
+            border-radius: 10px;
+            /* background-color: aqua; */
+         }
+         .container> main > .feature-work > .row > .card > .card-body {
+            padding: 20px 0;
+
+         }
+         .container> main > .feature-work > .row > .card > .card-body > .year {
+            margin: 15px 0;
+         }
+
+         .container> main > .feature-work > .row > .card .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+         .container> main > .feature-work > .row > .card > .card-body > .year {
+            margin: 15px 0;
+         }
+         .container> main > .feature-work > .row > .card > .card-body > .year > span:nth-child(1)
+         {
+            background-color: black;
+            padding: 3px 20px;
+            border-radius: 50px;
+            color: white;
+         }
+
+        
+
+    }
+
+   
+    /* -----------------------------Srceen Laptop ------------------------------*/
+    @media (min-width: 992px) {
+        .container > main {
+            width: 100%;
+            height: 60vh;
+            /* background-color: rgb(49, 34, 183); */
+         }
+        .containerr > main > .hero {
+            padding: 50px 120px;
+        }
+        .container > main > .hero > .image-user > .pf {
+            width: 400px;
+            height: 400px;
+            margin-top: 270px;
+        }
+        .container > main > .hero > .content-text > .text > h1 {
+            font-weight: 500;
+            line-height: 80px;
+            font-size: 70px;
+           
+        }
+        .container > main > .hero > .content-text > .text > p {
+            font-size: 25px;
+            padding: 30px 0;
+        }
+
+        .container > main >.content-text > .row > .card {
+            padding: 50px 40px;
+        }
+        .container > main > .content-exp {
+            padding: 0 120px;
+        }
+        .container > main > .content-exp > .row > h2 {
+            font-size: 30px;
+        } 
+
+        .container > main > .content-exp > .row .card {
+           padding: 50px 40px;
+        }
+            .container > main > .content-exp  {
+                padding: 0 120px;
+            }
+            .container > main > .content-exp > .row > .card h2{
+                font-size: 30px;
+            }    
+
+    }
+
+
+    /* --------------------Footer--------------- */
+    .container > footer {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 35px;
+    }
+    .container > footer > ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+    }
+    
+    .container > footer > ul > li {
+        padding: 0 5px;
+    }
+    
+    .container > footer > ul > li > a {
+        font-size: 45px;
+        color: black;
+        cursor: pointer;
+    }
+    

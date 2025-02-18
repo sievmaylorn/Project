@@ -1,0 +1,20 @@
+.container > footer {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 35px;
+}
+.container > footer > ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.container > footer > ul > li {
+    padding: 0 5px;
+}
+
+.container > footer > ul > li > a {
+    font-size: 45px;
+    color: black;
+    cursor: pointer;
+}
